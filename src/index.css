@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #e5f1ff;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    color: #535353;
+}
+.button{
+    background: #0b82ff;
+    padding: 0 10px;
+    width: fit-content;
+    color: white;
+    min-width: 70px;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 38px;
+    line-height: 38px;
+}
+label{
+    display: block;
+    margin-bottom: 5px;
+}
+input{
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: 1px solid #dbdbdb;
+    margin-bottom: 0;
+    height: 38px;
+    width: calc(100% - 20px);
+}
+.wrapper{
+    width: 800px;
+    margin: 20px auto;
+}
+.w-50{
+    width: 50%;
+}
+.flex{
+    display: flex;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.align-center{
+    align-items: center;
+}
+.align-bottom{
+    align-items: flex-end;
+}
+.heading{
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.input-wrapper.has-error input{
+    border-color: red;
+}
+.input-wrapper .input-error-msg{
+    display: none;
+}
+.input-wrapper.has-error .input-error-msg{
+    font-size: 10px;
+    color: red;
+    position: absolute;
+    display: block;
+}
+.search-wrapper{
+    padding: 20px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.3);
+    background: white;
+    border-radius: 5px;
+    width: 800px;
+    margin: 0px auto 20px;
+}
+
+.table{
+    box-shadow: 0 0 2px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    width: 800px;
+    background: white;
+    margin: 20px auto;
+}
+.table-header{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 10px;
+    border-bottom: 1px solid #dbdbdb;
+    background: #fafafa;
+}
+
+.table-header > div{
+    width: 25%;
+    height: 44px;
+    align-items: center;
+    display: flex;
+}
+.table-header > div:nth-child(4){
+    width: 15%;
+}
+.table-header > div.matched-cell{
+    justify-content: center;
+    width: 10%;
+}
+.table-row{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    border-bottom: 1px solid #dbdbdb;
+}
+.table-row:last-child{
+    border-bottom: none;
+}
+.table-row.no-data{
+    justify-content: center;
+    padding: 30px;
+    align-items: center;
+}
+.table-row > div{
+    width: 25%;
+}
+.table-row > div:nth-child(4){
+    width: 15%;
+}
+.table-row > div.matched-cell{
+    text-align: center;
+    width: 10%;
+    position: relative;
+}
+.table-row > div.matched-cell .tooltip{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.3);
+    font-size: 12px;
+    cursor: pointer;
+    min-width: 150px;
+    line-height: 16px;
+    margin-top: 20px;
+    
+}
+.table-row > div.matched-cell .tooltip span{
+    display: block;
+}
+.table-row > div.matched-cell svg{
+    cursor: pointer;
+}
+.table-row > div.matched-cell svg:hover + .tooltip{
+    display: block;
+}
+.not-matched,.matched{
+    background: red;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 40px;
+    padding: 10px 80px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.matched{
+    background: rgb(129, 190, 37);
+}
+.show-all{
+    color: #0b82ff;
+    font-weight: 500;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: block;
+}
